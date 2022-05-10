@@ -23,7 +23,7 @@ const runWorkerKernel = async () =>{
 cluster.isPrimary ? runMainKernel() : runWorkerKernel()
 
 function startWorkers(NUM_WORKERS){
-    for(let i=0;i<NUM_WORKERS;i++){
+    for(let i = 0;i< NUM_WORKERS; i++){
         cluster.fork()
     }
 }
